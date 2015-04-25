@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         src:['public/lib/*.js',
             'public/client/*.js'],
 
-        dest: 'dist/<% pkg.name %>.js'
+        dest: 'public/dist/<% pkg.name %>.js'
       }
     },
 
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'public/dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
@@ -91,9 +91,7 @@ module.exports = function(grunt) {
       },
       prodServer: {
         command: ['git add .',
-                  'git commit -m "autoGrunt commit"',
-                  'git push origin master',
-                  'git push azure master'].join('&&')
+                  'git commit -m "autoGrunt commit"'].join('&&')
       }
     },
   });
