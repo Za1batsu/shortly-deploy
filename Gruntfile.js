@@ -91,7 +91,7 @@ module.exports = function(grunt) {
       },
       prodServer: {
         command: ['git add .',
-                  'git commit -m "autoGrunt commit"'].join('&&')
+                  'git commit -m "autoGrunt commit2"'].join('&&')
       }
     },
   });
